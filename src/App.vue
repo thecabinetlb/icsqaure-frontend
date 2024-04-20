@@ -2,6 +2,7 @@
 import Hero from './components/Hero.vue';
 import Mission from './components/Mission.vue';
 import Values from './components/Values.vue';
+import Services from './components/Services.vue';
 
 </script>
 
@@ -10,5 +11,6 @@ import Values from './components/Values.vue';
     <Hero/>
     <Mission/>
     <Values/>
+    <Services/>
 </main>
 </template>

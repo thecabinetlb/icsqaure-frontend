@@ -22,7 +22,7 @@ const values = [
             <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="/#contact" class="self-end cursor-pointer px-4 py-3 h-fit ms-auto me-0 w-1/6 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Get in Touch</RouterLink>
         </div>
         <div class="flex flex-wrap items-center justify-center w-full gap-10">
-            <div v-for="(item, key) in values" :key="key" class="lg:w-[23%] sm:w-[49%] w-full min-h-[400px] bg-accent1 text-bg rounded-[20px] hover:scale-y-110 hover:bg-card-gradient hover:bg-cover hover:bg-center flex flex-col justify-center gap-6 p-6 shadow-sm group">
+            <div v-for="(item, key) in values" :key="key" class="lg:w-[23%] sm:w-[48%] w-full min-h-[400px] bg-accent1 text-bg rounded-[20px] hover:scale-y-110 hover:bg-card-gradient hover:bg-cover hover:bg-center flex flex-col justify-center gap-6 p-6 shadow-sm group">
                 <img :src="item.icon" alt="IC2" width="54" height="53" center cover responsive loading="lazy"/>
                 <h3 class="lg:text-2xl sm:text-xl text-lg font-[900] group-hover:text-accent1">{{ item.name }}</h3>
                 <p class="font-[400] text-justify w-2/3  group-hover:text-accent2">{{ item.description }}</p>
