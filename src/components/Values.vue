@@ -1,4 +1,4 @@
-<script scoped>
+<script setup>
 import { RouterLink } from 'vue-router'
 import value1 from '/images/values/value1.svg'
 import value2 from '/images/values/value2.svg'
@@ -12,20 +12,21 @@ const values = [
 ];
 </script>
 <template>
-    <section class="flex flex-col items-center justify-center w-10/12 min-h-screen mx-auto">
+    <section class="flex flex-col items-center justify-center w-10/12 min-h-screen gap-10 mx-auto">
         <div class="flex flex-wrap justify-between w-full gap-2">
             <div class="flex flex-col w-full gap-6 md:w-1/2">
-                <h1 class="px-3 py-2 w-fit font-[400] rounded-[8px] shadow-lg text-accent1 bg-primary">Growing with our Clients</h1>
+                <h1 class="px-3 py-2 w-fit font-[400] rounded-[8px] shadow-sm text-accent1 bg-primary">Growing with our Clients</h1>
                 <h2 class="text-accent1 uppercase lg:text-5xl sm:text-4xl text-3xl font-[500]">Our core values & principles</h2>
                 <p class="font-[400] text-justify text-accent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="/#contact" class="self-end cursor-pointer px-4 py-3 h-fit ms-auto me-0 w-1/6 font-[400] text-center rounded-[8px] shadow-lg text-accent1 bg-primary hover:brightness-125">Get in Touch</RouterLink>
+            <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="/#contact" class="self-end cursor-pointer px-4 py-3 h-fit ms-auto me-0 w-1/6 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Get in Touch</RouterLink>
         </div>
-        <div class="flex flex-wrap items-center justify-center w-full gap-6">
-            <div v-for="(item, key) in values" :key="key" class="w-40 h-40 bg-accent1 text-bg rounded-[16px] hover:scale-110 hover:bg-gradient hover:bg-cover hover:bg-center hover:text-primary flex flex-col gap-3 p-6">
-                <h3 class="uppercase lg:text-3xl sm:text-2xl text-xl font-[500]">{{ item.name }}</h3>
-                <p class="font-[400] text-justify 2xl:w-1/2 w-2/3">{{ item.description }}</p>
-                <RouterLink :id="'go-to' + item.name + '-page'" :aria-label="'go to' + item.name + 'page'" to="/" class="cursor-pointer px-4 py-3 w-1/4 font-[400] hover:brightness-125">Read More &larr;</RouterLink>
+        <div class="flex flex-wrap items-center justify-center w-full gap-10">
+            <div v-for="(item, key) in values" :key="key" class="lg:w-[23%] sm:w-[49%] w-full min-h-[400px] bg-accent1 text-bg rounded-[20px] hover:scale-y-110 hover:bg-card-gradient hover:bg-cover hover:bg-center flex flex-col justify-center gap-6 p-6 shadow-sm group">
+                <img :src="item.icon" alt="IC2" width="54" height="53" center cover responsive loading="lazy"/>
+                <h3 class="lg:text-2xl sm:text-xl text-lg font-[900] group-hover:text-accent1">{{ item.name }}</h3>
+                <p class="font-[400] text-justify w-2/3  group-hover:text-accent2">{{ item.description }}</p>
+                <RouterLink :id="'go-to' + item.name + '-page'" :aria-label="'go to' + item.name + 'page'" :to="item.link" :target="item.target" class="cursor-pointer px-4 py-3 font-[400] hover:brightness-125 group-hover:text-primary">Read More  &rarr;</RouterLink>
             </div>
         </div>
     </section>
