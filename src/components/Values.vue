@@ -19,7 +19,7 @@ const values = [
                 <h2 class="text-accent1 uppercase lg:text-5xl sm:text-4xl text-3xl font-[500]">Our core values & principles</h2>
                 <p class="font-[400] text-justify text-accent2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="/#contact" class="self-end cursor-pointer px-4 py-3 h-fit ms-auto me-0 w-1/3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Get in Touch</RouterLink>
+            <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="/#contact" class="self-end cursor-pointer px-4 py-3 h-fit ms-auto me-0 w-fit font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Get in Touch</RouterLink>
         </div>
         <div class="flex flex-wrap items-center justify-between w-full gap-y-10">
             <div v-for="(item, key) in values" :key="key" class="2xl:w-[23%] md:w-[32%] sm:w-[48%] w-full 2xl:min-h-[400px] min-h-[330px] bg-accent1 text-bg rounded-[20px] hover:scale-y-110 hover:bg-card-gradient hover:bg-cover hover:bg-center flex flex-col justify-center gap-6 p-6 shadow-sm group">

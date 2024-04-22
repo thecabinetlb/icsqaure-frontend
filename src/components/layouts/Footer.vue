@@ -20,7 +20,6 @@ const footerlinks = [
   { 
     id: 2, 
     name: 'Services', 
-    to: '/services',
     submenu: [
       { id: 1, name: 'Consulting' },
       { id: 2, name: 'Digital Templates' },
