@@ -19,8 +19,8 @@ const formData = ref({
 </script>
 
 <template>
-    <section class="flex flex-wrap items-center justify-between w-10/12 h-full min-h-screen py-20 mx-auto">
-        <div class="flex flex-col w-full h-full gap-10 md:w-1/3">
+    <section id="contact" class="flex flex-wrap items-center justify-between w-10/12 h-full min-h-screen py-20 mx-auto">
+        <div class="flex flex-col w-full h-full gap-10 lg:w-1/3">
             <div class="flex flex-col gap-6">
                 <h1 class="text-accent1 uppercase lg:text-5xl sm:text-4xl text-3xl font-[500]">Contact Us.It’s Easy.</h1>
                 <p class="font-[400] text-justify text-accent2">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.</p>
@@ -29,11 +29,11 @@ const formData = ref({
                 <img :src="item.icon" :alt="item.name" width="53" height="53" center cover responsive loading="lazy"/>
                 <div class="w-full">
                     <h3 class="font-[400] text-accent2">{{ item.name }}</h3>
-                    <p class="font-[500] text-justify w-2/3 text-accent1 group-hover:brightness-125">{{ item.content }}</p>
+                    <p class="font-[500] text-justify 2xl:w-1/2 lg:w-2/3 text-accent1 group-hover:brightness-125">{{ item.content }}</p>
                 </div>
             </div>
         </div>
-        <form class="grid w-full grid-cols-2 gap-6 md:w-2/3">
+        <form class="grid w-full grid-cols-2 gap-6 lg:w-2/3">
             <div class="w-full col-span-2 sm:col-span-1">
                 <input type="text" id="name" placeholder="Your Name" v-model="formData.name" required class="w-full px-4 py-3 border bg-accent1 boredr-accent2 rounded-[20px]">
             </div>    

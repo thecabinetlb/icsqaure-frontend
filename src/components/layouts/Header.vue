@@ -82,9 +82,9 @@ const toggleOpen = () => {
         </nav>
       </div> 
     </nav>   
-    <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="max-lg:absolute left-3/4 top-2 max-lg:w-2/12 h-[50px] cursor-pointer px-4 py-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
+    <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="max-lg:absolute right-0 me-20 top-4 w-32 h-fit cursor-pointer px-4 py-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
     <!-- Mobile -->
-    <button aria-label="open menu" class="absolute flex items-center justify-center w-6 h-6 lg:hidden right-6 top-5" @click="toggleOpen">
+    <button aria-label="open menu" class="absolute flex items-center justify-center w-6 h-6 lg:hidden right-6 top-7" @click="toggleOpen">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">
       <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
       </svg>   
@@ -101,7 +101,7 @@ const toggleOpen = () => {
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>
         </RouterLink>
         <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-full p-4 space-y-4">
-            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="w-fit cursor-pointer font-[400] text-accent1 drop-shadow-md group">
+            <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="w-32 cursor-pointer font-[400] text-accent1 drop-shadow-md group">
               {{ subitem.name }}
               <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>
             </div>
