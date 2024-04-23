@@ -4,9 +4,9 @@ import facebook from '/images/socials/facebook.svg'
 import linkedin from '/images/socials/linkedin.svg'
 import instagram from '/images/socials/instagram.svg'
 const socials = [
-{ id: 1, name:"Facebook", content: 'Follow us on Facebook', link:"/", target:"_blank", icon:facebook },
-{ id: 2, name:"Instagram", content: 'Follow us on Instagram', link:"/", target:"_blank", icon:instagram },
-{ id: 3, name:"Linkedin", content: 'Follow us on Linkedin', link:"/", target:"_blank", icon:linkedin },
+{ id: 1, name:"Facebook", content: 'Lorem ipsum', link:"/", target:"_blank", icon:facebook },
+{ id: 2, name:"Instagram", content: 'Lorem ipsum', link:"/", target:"_blank", icon:instagram },
+{ id: 3, name:"Linkedin", content: 'Lorem ipsum', link:"/", target:"_blank", icon:linkedin },
 ];
 const footerlinks = [
   {
@@ -42,7 +42,7 @@ const footerlinks = [
     <footer class="flex flex-col items-center justify-center gap-10 pt-20 bg-center bg-cover bg-gradient">
         <div class="flex flex-wrap justify-between w-10/12 mx-auto">
             <div class="w-full mb-10 lg:w-[20%] lg:mb-0">
-                <img :src="logo" alt="IC2" width="65" height="70" class="mx-auto" center cover responsive loading="lazy"/>
+                <img :src="logo" alt="IC2" width="65" height="70" class="lg:mx-auto" center cover responsive loading="lazy"/>
             </div>
             <ul role="list" class="flex flex-wrap justify-between w-full gap-y-3 lg:gap-0 lg:w-3/4 list-style-none">
                 <li v-for="(item, key) in footerlinks" :key="key" class="w-1/2 lg:w-1/4 sm:w-1/3">
@@ -53,10 +53,10 @@ const footerlinks = [
                         {{ subitem.name }}
                     </div>                
                 </li>
-                <li class="flex flex-col w-1/2 gap-3 lg:w-1/4 sm:w-1/3">
-                    <div v-for="(item, key) in socials" :key="key" class="h-[48px] rounded-full bg-accent1/30 flex items-center gap-2 hover:brightness-110 cursor-pointer">
+                <li class="flex flex-wrap w-full gap-3 mt-10 lg:flex-col lg:w-1/4 lg:mt-0">
+                    <div v-for="(item, key) in socials" :key="key" class="h-[48px] md:flex-1 sm:w-[48%] w-full lg:w-full rounded-full bg-accent1/30 flex items-center gap-2 hover:brightness-110 cursor-pointer">
                         <img :src="item.icon" :alt="item.name" width="48" height="48" center cover responsive loading="lazy"/>                
-                        <h2 class="text-sm font-[500]">{{ item.content }}</h2>
+                        <h2 class="px-2 font-[500]">{{ item.content }}</h2>
                     </div>
                 </li>
             </ul>

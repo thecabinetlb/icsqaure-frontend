@@ -64,9 +64,10 @@ const toggleOpen = () => {
 
 </script>
 <template>
- <header class="fixed inset-0 z-[10] h-[74px] lg:flex justify-around items-center mx-auto lg:px-6 py-3 shadow-sm bg-bg">
-    <img :src="logo" alt="IC2 logo" width="45" height="54" class="max-lg:ms-6" center responsive/>
-    <!-- Desktop -->
+ <header class="fixed inset-0 z-[10] h-[74px] mx-auto py-3 shadow-lg bg-bg">
+  <div class="items-center justify-between w-10/12 mx-auto lg:flex">
+    <img :src="logo" alt="IC2 logo" width="45" height="54" class="-translate-x-1/2 max-lg:relative left-1/2" cover responsive/>
+  <!-- Desktop -->
     <nav class="items-center justify-between hidden gap-6 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key" class="relative">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="px-3 cursor-pointer text-lg font-[400] text-accent1 group"
@@ -74,7 +75,7 @@ const toggleOpen = () => {
           {{ item.name }}
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id" class="lg:w-[250px] h-fit lg:absolute left-0 top-[60px] space-y-3 p-6 lg:bg-bg" @mouseleave="hasSubMenu = false">
+        <nav v-if="hasSubMenu && openSubMenu === item.id" class="lg:w-[250px] h-fit lg:absolute left-0 top-[60px] space-y-3 p-8 lg:bg-bg" @mouseleave="hasSubMenu = false">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="relative cursor-pointer font-[400] text-accent1 text-lg drop-shadow-md group">
               {{ subitem.name }}
               <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>
@@ -82,9 +83,9 @@ const toggleOpen = () => {
         </nav>
       </div> 
     </nav>   
-    <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="max-lg:absolute right-0 me-20 top-4 w-32 h-fit cursor-pointer px-4 py-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
+    <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="max-lg:absolute right-[8.333333%] max-sm:text-[12px] top-4 w-fit cursor-pointer px-4 py-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
     <!-- Mobile -->
-    <button aria-label="open menu" class="absolute flex items-center justify-center w-6 h-6 lg:hidden right-6 top-7" @click="toggleOpen">
+    <button aria-label="open menu" class="absolute flex items-center justify-center w-8 h-8 left-[8.333333%] lg:hidden top-7" @click="toggleOpen">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">
       <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
       </svg>   
@@ -93,7 +94,7 @@ const toggleOpen = () => {
       </Transition> 
     </button>
     <Transition>
-    <nav v-show="isOpen" class="w-full p-6 space-y-6 lg:hidden bg-bg">
+    <nav v-show="isOpen" class="w-full p-8 space-y-8 lg:hidden bg-bg">
       <div v-for="(item, key) in navlinks" :key="key">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="w-6/12 cursor-pointer font-[400] text-accent1 drop-shadow-md group"
         @click="toggleSubMenu(item)">
@@ -108,6 +109,7 @@ const toggleOpen = () => {
         </nav>
       </div>
     </nav>      
-    </Transition>
+    </Transition>    
+  </div>
   </header>
 </template>

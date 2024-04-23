@@ -19,6 +19,12 @@ export default {
         'gradient': 'linear-gradient(90deg, rgba(0, 0, 0), rgba(0, 117, 117, 0.8), rgba(0, 204, 204))',
         'card-gradient': 'linear-gradient(90deg, rgba(0, 117, 117), rgba(0, 204, 204))',
         'hero': 'url(/images/hero/hero.webp)'
+      },
+      aspectRatio: {
+        '1.48/1': '1.48 / 1',
+        '1.57/1': '1.57 / 1',
+        '2.46/1': '2.46 / 1',
+        '1.82/1': '1.82 / 1',
       }
     }
   },
