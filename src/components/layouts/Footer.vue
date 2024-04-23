@@ -1,5 +1,5 @@
 <script setup>
-import logo from '/biglogo.svg'
+import logo from '/ic2logo.webp'
 import facebook from '/images/socials/facebook.svg'
 import linkedin from '/images/socials/linkedin.svg'
 import instagram from '/images/socials/instagram.svg'
@@ -42,7 +42,7 @@ const footerlinks = [
     <footer class="flex flex-col items-center justify-center gap-10 pt-20 bg-center bg-cover bg-gradient">
         <div class="flex flex-wrap justify-between w-10/12 mx-auto">
             <div class="w-full mb-10 lg:w-[20%] lg:mb-0">
-                <img :src="logo" alt="IC2" width="65" height="70" class="lg:mx-auto" center cover responsive loading="lazy"/>
+                <img :src="logo" alt="IC2" width="45" height="54" class="scale-125" center cover responsive loading="lazy"/>
             </div>
             <ul role="list" class="flex flex-wrap justify-between w-full gap-y-3 lg:gap-0 lg:w-3/4 list-style-none">
                 <li v-for="(item, key) in footerlinks" :key="key" class="w-1/2 lg:w-1/4 sm:w-1/3">
