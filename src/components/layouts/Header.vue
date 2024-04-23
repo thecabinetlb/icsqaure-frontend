@@ -66,7 +66,7 @@ const toggleOpen = () => {
 <template>
  <header class="fixed inset-0 z-[10] h-[74px] mx-auto py-3 shadow-lg bg-bg">
   <div class="items-center justify-between w-10/12 mx-auto lg:flex">
-    <img :src="logo" alt="IC2 logo" width="45" height="54" class="-translate-x-1/2 max-lg:relative left-1/2" cover responsive/>
+    <img :src="logo" alt="IC2 logo" width="45" height="54" class="max-lg:-translate-x-1/2 max-lg:transform max-lg:relative left-1/2" cover responsive/>
   <!-- Desktop -->
     <nav class="items-center justify-between hidden gap-6 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key" class="relative">
@@ -83,7 +83,7 @@ const toggleOpen = () => {
         </nav>
       </div> 
     </nav>   
-    <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="max-lg:absolute right-[8.333333%] max-sm:text-[12px] top-4 w-fit cursor-pointer px-4 py-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
+    <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="max-lg:absolute right-[8.333333%] max-sm:text-[12px] top-4 w-fit cursor-pointer p-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
     <!-- Mobile -->
     <button aria-label="open menu" class="absolute flex items-center justify-center w-8 h-8 left-[8.333333%] lg:hidden top-7" @click="toggleOpen">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">

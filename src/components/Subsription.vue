@@ -6,16 +6,16 @@ const email = ref('')
 <template>
     <section class="flex flex-col items-center justify-center w-full h-full bg-center bg-cover bg-gradient">
         <div class="flex flex-wrap justify-between w-full gap-10 pt-40 mx-auto lg:gap-0">
-            <div class="flex flex-col 2xl:w-[46%] lg:w-[44%] w-10/12 mx-auto gap-y-6 lg:ms-[8.333333%]">
+            <div class="flex flex-col 2xl:w-[46%] lg:w-[51%] w-10/12 mx-auto gap-y-6 lg:ms-[8.333333%] me-0">
                 <h1 class="px-3 py-2 w-fit font-[500] rounded-[8px] text-accent1 shadow-sm border border-primary">Contact</h1>
-                <h2 class="text-accent1 uppercase xl:text-6xl lg:text-5xl sm:text-6xl text-4xl font-[500]">Ready To Talk?</h2>
+                <h2 class="text-accent1 uppercase 2xl:text-6xl xl:text-5xl sm:text-6xl text-4xl font-[500]">Ready To Talk?</h2>
                 <p class="font-[400] text-justify text-accent2 lg:w-3/4">Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque.</p>
                 <div class="flex flex-wrap items-center w-full gap-3">
-                    <input type="text" id="email" placeholder="example@gmail.com" v-model="email" required class="sm:w-3/4 w-full px-4 py-3 border bg-accent1 boredr-accent2 rounded-[8px]">
-                    <RouterLink id="go-to-mission-page" aria-label="go to mission page" to="/mission" class="cursor-pointer px-4 py-3 sm:w-fit font-[400] text-accent1 text-center rounded-[8px] shadow-sm bg-primary hover:brightness-125">Read More</RouterLink>
+                    <input type="text" id="email" placeholder="example@gmail.com" v-model="email" required class="md:w-2/3 w-full p-3 border bg-accent1 boredr-accent2 rounded-[8px]">
+                    <RouterLink id="go-to-mission-page" aria-label="go to mission page" to="/mission" class="cursor-pointer p-3 w-fit font-[400] text-accent1 text-center rounded-[8px] shadow-sm bg-primary hover:brightness-125">Read More</RouterLink>
                 </div>
             </div>
-            <div class="relative 2xl:w-[44%] lg:w-[46%] ms-auto me-0"
+            <div class="relative 2xl:w-[44%] lg:w-[40%] ms-auto me-0"
              v-motion
                 :initial="{
                     x: 100,

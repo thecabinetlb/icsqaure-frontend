@@ -16,7 +16,7 @@ export default {
         '10': '0.1',
       },
       backgroundImage: {
-        'gradient': 'linear-gradient(90deg, rgba(0, 0, 0), rgba(0, 117, 117, 0.8), rgba(0, 204, 204))',
+        'gradient': 'linear-gradient(90deg, rgba(0, 0, 0), rgba(0, 117, 117), rgba(0, 204, 204))',
         'card-gradient': 'linear-gradient(90deg, rgba(0, 117, 117), rgba(0, 204, 204))',
         'hero': 'url(/images/hero/hero.webp)'
       },
