@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 
 </script>
 <template>
-    <section class="flex flex-col items-center justify-center w-full h-full py-20 bg-center bg-cover  bg-gradient">
+    <section class="flex flex-col items-center justify-center w-full h-full py-20 bg-center bg-cover bg-gradient">
         <div class="flex flex-wrap justify-between w-10/12 gap-10 mx-auto lg:gap-0">
             <div class="flex flex-col justify-center w-full gap-6 lg:w-1/2">
                 <h1 class="text-accent1 uppercase 2xl:text-6xl xl:text-5xl sm:text-6xl text-4xl font-[500]">Our Mission</h1>

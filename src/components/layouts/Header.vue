@@ -64,13 +64,14 @@ const toggleOpen = () => {
 
 </script>
 <template>
- <header class="fixed inset-0 z-[10] h-[74px] mx-auto py-3 shadow-lg bg-bg">
+ <header class="absolute inset-0 z-[10] h-[74px] mx-auto py-3 shadow-lg bg-bg">
   <div class="items-center justify-between w-10/12 mx-auto lg:flex">
     <img :src="logo" alt="IC2 logo" width="45" height="54" class="max-lg:-translate-x-1/2 max-lg:transform max-lg:relative left-1/2" cover responsive/>
   <!-- Desktop -->
     <nav class="items-center justify-between hidden gap-6 lg:flex">
       <div v-for="(item, key) in navlinks" :key="key" class="relative">
-        <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="px-3 cursor-pointer text-lg font-[400] text-accent1 group"
+        <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to"   
+        class="px-3 cursor-pointer text-lg font-[400] text-accent1 group"
         @mouseenter="openSubMenu = item.id, hasSubMenu = item.submenu ? true : false">
           {{ item.name }}
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>

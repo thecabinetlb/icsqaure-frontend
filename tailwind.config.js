@@ -18,7 +18,10 @@ export default {
       backgroundImage: {
         'gradient': 'linear-gradient(90deg, rgba(0, 0, 0), rgba(0, 117, 117), rgba(0, 204, 204))',
         'card-gradient': 'linear-gradient(90deg, rgba(0, 117, 117), rgba(0, 204, 204))',
-        'hero': 'url(/images/hero/hero.webp)'
+        'hero': 'url(/images/hero/hero.webp)',
+        'background_v3': 'url(/images/hero/background_v3.webp)',
+        'sky_v3': 'url(/images/hero/sky_v3.webp)',
+        'buildings_v3': 'url(/images/hero/buildings_v3.webp)'
       },
       aspectRatio: {
         '1.48/1': '1.48 / 1',
