@@ -17,21 +17,21 @@ const navlinks = [
     id: 3, 
     name: 'Services', 
     to: '/services',
-    submenu: [
-      { id: 1, name: 'Consulting' },
-      { id: 2, name: 'Digital Templates' },
-      { id: 3, name: 'SaaS' },
-      { id: 4, name: 'Bespoke Solutions' }
-    ]
+    // submenu: [
+    //   { id: 1, name: 'Consulting' },
+    //   { id: 2, name: 'Digital Templates' },
+    //   { id: 3, name: 'SaaS' },
+    //   { id: 4, name: 'Bespoke Solutions' }
+    // ]
   }, 
   {
     id: 4,
     name: "Industries",
     to: '/industries',
-    submenu: [
-        { id: 1, name: "Smart Cities" },
-        { id: 2, name: "Food & Beverage" }
-    ]
+    // submenu: [
+    //     { id: 4, name: "Smart Cities" },
+    //     { id: 5, name: "Food & Beverage" }
+    // ]
   }
 ];
 const hasSubMenu = ref(false)
@@ -73,15 +73,15 @@ const toggleOpen = () => {
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to"   
         class="px-3 cursor-pointer text-lg font-[400] text-accent1 group"
         @mouseenter="openSubMenu = item.id, hasSubMenu = item.submenu ? true : false">
-          {{ item.name }}
+        <span class="group-hover:text-primary">{{ item.name }}</span>
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id" class="lg:w-[250px] h-fit lg:absolute left-0 top-[60px] space-y-3 p-8 lg:bg-bg" @mouseleave="hasSubMenu = false">
+        <!-- <nav v-if="hasSubMenu && openSubMenu === item.id" class="lg:w-[250px] h-fit lg:absolute left-0 top-[60px] space-y-3 p-8 lg:bg-bg" @mouseleave="hasSubMenu = false">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="relative cursor-pointer font-[400] text-accent1 text-lg drop-shadow-md group">
-              {{ subitem.name }}
+              <span class="group-hover:text-primary">{{ subitem.name }}</span>
               <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>
             </div>
-        </nav>
+        </nav> -->
       </div> 
     </nav>   
     <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="max-lg:absolute right-[8.333333%] max-sm:text-[12px] top-4 w-fit cursor-pointer p-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
@@ -99,15 +99,15 @@ const toggleOpen = () => {
       <div v-for="(item, key) in navlinks" :key="key">
         <RouterLink :id="item.name" :aria-label="'go to' + item.name" :to="item.to" class="w-6/12 cursor-pointer font-[400] text-accent1 drop-shadow-md group"
         @click="toggleSubMenu(item)">
-          {{ item.name }}
+          <span class="group-hover:text-primary">{{ item.name }}</span>
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>
         </RouterLink>
-        <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-full p-4 space-y-4">
+        <!-- <nav v-if="hasSubMenu && openSubMenu === item.id" class="w-full p-4 space-y-4">
             <div v-for="(subitem, subkey) in item.submenu" :key="subkey" class="w-32 cursor-pointer font-[400] text-accent1 drop-shadow-md group">
-              {{ subitem.name }}
+              <span class="group-hover:text-primary">{{ subitem.name }}</span>
               <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent1 group-hover:w-full transition-all duration-600"></span>
             </div>
-        </nav>
+        </nav> -->
       </div>
     </nav>      
     </Transition>    

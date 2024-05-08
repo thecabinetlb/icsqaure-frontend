@@ -8,7 +8,6 @@ import { RouterLink } from 'vue-router'
             <div class="flex flex-col justify-center w-full gap-6 lg:w-1/2">
                 <h1 class="text-accent1 uppercase 2xl:text-6xl xl:text-5xl sm:text-6xl text-4xl font-[500]">Our Mission</h1>
                 <p class="font-[400] text-justify text-accent2 lg:w-3/4">Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.Lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
-                <RouterLink id="go-to-mission-page" aria-label="go to mission page" to="/mission" class="cursor-pointer p-3 w-fit font-[400] text-center text-accent1 rounded-[8px] shadow-sm bg-primary hover:brightness-125">Read More</RouterLink>
             </div>
             <div class="w-full lg:w-1/2"        
             v-motion
