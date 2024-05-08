@@ -84,7 +84,7 @@ const toggleOpen = () => {
         </nav> -->
       </div> 
     </nav>   
-    <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="#contact" class="max-lg:absolute right-[8.333333%] max-sm:text-[12px] top-4 w-fit cursor-pointer p-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
+    <RouterLink id="go-to-contact-section" aria-label="go to contact section" to="/contact" class="max-lg:absolute right-[8.333333%] max-sm:text-[12px] top-4 w-fit cursor-pointer p-3 font-[400] text-center rounded-[8px] shadow-sm text-accent1 bg-primary hover:brightness-125">Contact Us</RouterLink>
     <!-- Mobile -->
     <button aria-label="open menu" class="absolute flex items-center justify-center w-8 h-8 left-[8.333333%] lg:hidden top-7" @click="toggleOpen">
       <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="100%" fill="white" viewBox="0 0 50 50">

@@ -5,9 +5,9 @@ import Header from './components/layouts/Header.vue';
 </script>
 
 <template>
-<main>
-    <Header/>
-    <RouterView/>
-    <Footer/>
-</main>
+    <main>
+        <Header/>
+        <RouterView/>
+        <Footer/>
+    </main>
 </template>
