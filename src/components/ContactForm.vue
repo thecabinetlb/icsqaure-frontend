@@ -242,15 +242,15 @@ const handleSubmit = () => {
             </div>
             <!-- Recaptchs -->
             <div class="w-full col-span-2">
-            <Checkbox v-model="ReCaptchaValid" />          
-            <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
+                <Checkbox v-model="ReCaptchaValid" />          
+                <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
             </div>
             <!-- Submit -->
             <div class="flex flex-wrap items-center w-full gap-2">
-            <button aria-label="send your message"class="cursor-pointer p-3 w-fit font-[400] text-center text-accent1 rounded-[8px] shadow-sm bg-primary hover:brightness-125">
-            {{loading === true ?  'Sending...' : 'Send Message'}}
-            </button>            
-            <p v-if="loading === false" class="text-green-500">Thank you for your message, we'll get back to you soon.</p>                
+                <button aria-label="send your message"class="cursor-pointer p-3 w-fit font-[400] text-center text-accent1 rounded-[8px] shadow-sm bg-primary hover:brightness-125">
+                {{loading === true ?  'Sending...' : 'Send Message'}}
+                </button>            
+                <p v-if="loading === false" class="text-green-500">Thank you for your message, we'll get back to you soon.</p>                
             </div>
 
             <!-- Errors after submit -->

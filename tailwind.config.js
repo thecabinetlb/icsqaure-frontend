@@ -16,8 +16,8 @@ export default {
         '10': '0.1',
       },
       backgroundImage: {
-        'gradient': 'linear-gradient(90deg, rgba(0, 0, 0), rgba(0, 117, 117), rgba(0, 204, 204))',
-        'card-gradient': 'linear-gradient(90deg, rgba(0, 117, 117), rgba(0, 204, 204))',
+        'gradient': 'linear-gradient(90deg, rgba(0, 27, 27), rgba(0, 102, 102))',
+        // 'card-gradient': 'linear-gradient(90deg, rgba(0, 117, 117), rgba(0, 204, 204))',
         'hero': 'url(/images/hero/hero.webp)',
         'background_v3': 'url(/images/hero/background_v3.webp)',
         'sky_v3': 'url(/images/hero/sky_v3.webp)',
@@ -28,6 +28,7 @@ export default {
         '1.57/1': '1.57 / 1',
         '2.46/1': '2.46 / 1',
         '1.82/1': '1.82 / 1',
+        '0.7/1': '0.7 / 1',
       }
     }
   },
