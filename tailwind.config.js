@@ -21,7 +21,9 @@ export default {
         'hero': 'url(/images/hero/hero.webp)',
         'background_v3': 'url(/images/hero/background_v3.webp)',
         'sky_v3': 'url(/images/hero/sky_v3.webp)',
-        'buildings_v3': 'url(/images/hero/buildings_v3.webp)'
+        'buildings_v3': 'url(/images/hero/buildings_v3.webp)',
+        'approach-1': 'url(/images/insidepages/about/ourapproach/approach1.webp)',
+        'approach-2': 'url(/images/insidepages/about/ourapproach/approach2.webp)',
       },
       aspectRatio: {
         '1.48/1': '1.48 / 1',

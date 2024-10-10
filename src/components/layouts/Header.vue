@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { ref, onMounted, onUnmounted } from 'vue'
-import logo from '/ic2logo.webp'
+import logo from '/ic2logo.svg'
 const navlinks = [
   {
     id: 1,

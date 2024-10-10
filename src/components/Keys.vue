@@ -18,7 +18,7 @@ const openDetails = ref(null)
           <div v-for="(item, key) in data" :key="key" 
           class="2xl:w-[23%] md:w-[48%] sm:w-[47%] w-full bg-accent1 text-bg rounded-[20px] flex flex-col gap-6 p-6 shadow-sm ease duration-300"
           @click="openDetails = key"
-          :class="{'flex-grow items-start bg-gradient bg-cover bg-center lg:w-[181px]' : openDetails === key, 'max-h-[151px] items-center' : openDetails !== key}">
+          :class="{'flex-grow scale-105 items-start bg-gradient bg-cover bg-center lg:w-[181px]' : openDetails === key, 'max-h-[151px] items-center flex-shrink' : openDetails !== key}">
               <div :class="{'flex gap-3 items-center' : openDetails === key}">
                 <img :src="openDetails === key ? item.iconopened : item.icon" alt="IC2" width="54" height="53" center cover responsive loading="lazy" :class="{'mx-auto mb-6' : openDetails !== key}"/>
                 <h3 class="md:text-2xl sm:text-xl text-lg font-[900]" :class="{'text-center' : openDetails !== key, 'text-accent1' : openDetails === key}">{{ item.name }}</h3>                

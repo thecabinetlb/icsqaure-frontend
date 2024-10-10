@@ -1,13 +1,10 @@
 <script setup>
-import Footer from './components/layouts/Footer.vue';
-import Header from './components/layouts/Header.vue';
+import Placeholder from './components/Placeholder.vue';
 
 </script>
 
 <template>
     <main>
-        <Header/>
-        <RouterView/>
-        <Footer/>
+      <Placeholder/>
     </main>
 </template>

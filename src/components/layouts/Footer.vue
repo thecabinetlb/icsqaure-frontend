@@ -1,13 +1,9 @@
 <script setup>
-import logo from '/ic2logo.webp'
+import logo from '/ic2logo.svg'
+import Socials from '../Socials.vue'
 import facebook from '/images/socials/facebook.svg'
 import linkedin from '/images/socials/linkedin.svg'
 import instagram from '/images/socials/instagram.svg'
-const socials = [
-{ id: 1, name:"Facebook", content: 'Lorem ipsum', link:"/", target:"_blank", icon:facebook },
-{ id: 2, name:"Instagram", content: 'Lorem ipsum', link:"/", target:"_blank", icon:instagram },
-{ id: 3, name:"Linkedin", content: 'Lorem ipsum', link:"/", target:"_blank", icon:linkedin },
-];
 const footerlinks = [
   {
   id: 1,
@@ -36,6 +32,11 @@ const footerlinks = [
   ]
   }
 ];
+const socials = [
+{ id: 1, name:"Facebook", content: 'Lorem ipsum', link:"/", target:"_blank", icon:facebook },
+{ id: 2, name:"Instagram", content: 'Lorem ipsum', link:"/", target:"_blank", icon:instagram },
+{ id: 3, name:"Linkedin", content: 'Lorem ipsum', link:"/", target:"_blank", icon:linkedin },
+];
 </script>
 
 <template>
@@ -54,10 +55,7 @@ const footerlinks = [
                     </div>                
                 </li>
                 <li class="flex flex-wrap w-full gap-3 mt-10 lg:flex-col lg:w-1/4 lg:mt-0">
-                    <div v-for="(item, key) in socials" :key="key" class="h-[48px] md:flex-1 sm:w-[48%] w-full lg:w-full rounded-full bg-accent1/30 flex items-center gap-2 hover:brightness-110 cursor-pointer">
-                        <img :src="item.icon" :alt="item.name" width="48" height="48" center cover responsive loading="lazy"/>                
-                        <h2 class="px-2 font-[500]">{{ item.content }}</h2>
-                    </div>
+                    <Socials isFooter :data="socials"/>
                 </li>
             </ul>
         </div>
