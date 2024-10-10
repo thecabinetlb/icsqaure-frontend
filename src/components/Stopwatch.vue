@@ -7,7 +7,7 @@
         </div>
         <div class="lg:min-w-[145px] sm:min-w-[81px] flex flex-col items-center justify-center gap-6">
             <span class="rounded-[8px] lg:p-8 sm:p-6 p-3 grid place-content-center font-[500] 2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl tracking-widest text-accent1 shadow-lg bg-bg/30">{{ timeLeft.hours }}</span>
-            <span class="font-[100] 2xl:text-3xl md:text-2xl sm:text-xl text-md text-center text-accent2">Months</span>
+            <span class="font-[100] 2xl:text-3xl md:text-2xl sm:text-xl text-md text-center text-accent2">Hours</span>
         </div>
         <div class="lg:min-w-[145px] sm:min-w-[81px] flex flex-col items-center justify-center gap-6">
             <span class="rounded-[8px] lg:p-8 sm:p-6 p-3 grid place-content-center font-[500] 2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl tracking-widest text-accent1 shadow-lg bg-bg/30">{{ timeLeft.minutes }}</span>

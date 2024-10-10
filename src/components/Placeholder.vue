@@ -2,7 +2,6 @@
 import logo from '/ic2logo_grey.svg'
 import linkedin from '/images/socials/linkedin.svg'
 import Socials from './Socials.vue'
-import Stopwatch from './Stopwatch.vue'
 
 const sociallinks = [
   { id: 1, name:'Linkedin', to: 'https://www.linkedin.com/company/ic2-by-aits', target:"_blank", icon:linkedin },
@@ -14,15 +13,22 @@ const sociallinks = [
 
   <div class="flex flex-col items-center justify-center w-11/12 h-full gap-10 mx-auto 2xl:gap-16 2xl:w-8/12 lg:w-10/12">
     <div class="space-y-3">
-      <h1 class="2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl font-[100] text-center text-accent1">
+      <h1 class="2xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-[100] text-center text-accent1">
         We're busy building something amazing.
       </h1>
-      <h1 class="2xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl font-[100] text-center text-accent1">
+      <h1 class="2xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-[100] text-center text-accent1">
         <span class="font-[900]">Stay tuned</span> for the future of innovation.
       </h1>      
     </div>
-
-    <Stopwatch/>
+    
+    <div class="flex items-center justify-center w-full gap-3 px-2 mt-10">
+      <span class="text-sm font-[200] text-accent1">0%</span>
+      <div class="relative w-full border border-accent1 rounded-full h-2.5">
+        <div class="bg-accent1 h-2.5 rounded-full" style="width: 85%;"></div>
+      </div>
+      <span class="text-sm font-[200] text-accent1">100%</span>
+    </div>
+    
     <div class="flex flex-wrap items-center justify-center gap-6 text-center">
       <p class="tracking-wide font-[400] lg:text-[24px] md:text-[20px] sm:text-[18px] text-accent2">
         Follow us for the latest updates:
