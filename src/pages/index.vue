@@ -5,7 +5,6 @@ import Services from '../components/Services.vue';
 import ContactForm from '../components/ContactForm.vue';
 import Subsription from '../components/Subsription.vue';
 import ValueProposition from '../components/ValueProposition.vue';
-
 </script>
 
 <template>

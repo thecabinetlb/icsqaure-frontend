@@ -1,5 +1,5 @@
 <script setup>
-import OurApproach from '@/components/OurApproach.vue'
+import OurApproach from '../components/OurApproach.vue'
 import Founders from '../components/Founders.vue'
 import Keys from '../components/Keys.vue'
 import founder1 from '/images/insidepages/about/founders/founder1.webp'

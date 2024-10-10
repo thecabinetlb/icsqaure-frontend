@@ -1,8 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { ref, reactive, watch } from 'vue'
-import { Checkbox } from 'vue-recaptcha';
-import { useRecaptchaProvider } from 'vue-recaptcha'
+
 defineProps({
     data: Array
 })
@@ -125,7 +124,7 @@ watch(formData, (newFormData) => {
 }, { deep: true });
 
 const handleSubmit = () => {
-    if (!ReCaptchaValid.value) {
+    if (reCaptchaValid.value === false) {
         console.log('ReCaptcha is invalid');
         return; // Don't proceed with form submission
     }
@@ -165,6 +164,7 @@ const handleSubmit = () => {
         });
     } 
 };
+const sitekey = import.meta.env.VITE_RECAPTCHAV2_SITEKEY;
 
 </script>
 
@@ -242,8 +242,13 @@ const handleSubmit = () => {
             </div>
             <!-- Recaptchs -->
             <div class="w-full col-span-2">
-                <Checkbox v-model="ReCaptchaValid" />          
-                <p v-show="!ReCaptchaValid" className="ms-2 mb-2 font-[700] text-[12px] text-red-500">Please click the checkbox</p>
+                <vue-recaptcha 
+                    ref="recaptcha" 
+                    :sitekey="sitekey"
+                    @verify="onVerify"
+                    @expired="onExpired"
+                    theme="dark"
+                    ></vue-recaptcha>
             </div>
             <!-- Submit -->
             <div class="flex flex-wrap items-center w-full gap-2">

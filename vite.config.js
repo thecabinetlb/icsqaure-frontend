@@ -1,16 +1,23 @@
-import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import Pages from 'vite-plugin-pages';
+import generateSitemap from 'vite-ssg-sitemap';
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
+    Pages({
+      // Options for vite-plugin-pages
+      extensions: ['vue'],
+      dirs: 'src/pages', // Ensure your pages are in the correct directory
+    }),
   ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
-})
+  ssgOptions: {
+    onFinished() { generateSitemap() },
+    script: 'async',
+    formatting: 'minify',
+  },  
+  server: {
+    historyApiFallback: true,  // This ensures the server falls back to index.html for dynamic routes
+  },
+});
