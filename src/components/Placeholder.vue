@@ -9,10 +9,10 @@ const sociallinks = [
 </script>
 <template>
 <section class="flex flex-col items-center justify-center h-screen mx-auto bg-center bg-cover bg-sky_v3">
-    <img :src="logo" alt="IC2" width="45" height="54" class="mt-20 scale-125" loading="eager" />
+    <img :src="logo" alt="IC2" width="45" height="54" class="mt-20 scale-150" loading="eager" />
 
   <div class="flex flex-col items-center justify-center w-11/12 h-full gap-10 mx-auto 2xl:w-8/12 lg:w-10/12">
-    <h1 class="2xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-2xl font-[500] text-center uppercase text-accent1">
+    <h1 class="2xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-[500] text-center uppercase text-accent1">
       We're busy building something amazing. Stay tuned for the future of innovation.
     </h1>
 
