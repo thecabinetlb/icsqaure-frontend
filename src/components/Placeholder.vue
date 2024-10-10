@@ -4,7 +4,7 @@ import linkedin from '/images/socials/linkedin.svg'
 import Socials from './Socials.vue'
 
 const sociallinks = [
-  { id: 1, name:'Linkedin', to: 'https://www.linkedin.com/company/ic2-by-aits/', target:"_blank", icon:linkedin },
+  { id: 1, name:'Linkedin', to: 'https://www.linkedin.com/company/ic2-by-aits', target:"_blank", icon:linkedin },
 ];
 </script>
 <template>
